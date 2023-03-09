@@ -1,4 +1,4 @@
-class Work < ApplicationRecord
+class Item < ApplicationRecord
     validates :title, presence: true
     validates :description, presence: true
 

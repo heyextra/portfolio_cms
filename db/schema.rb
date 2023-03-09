@@ -30,7 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_08_193842) do
     t.index ["name"], name: "index_categories_on_name", unique: true
   end
 
-  create_table "works", force: :cascade do |t|
+  create_table "items", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "link"
@@ -38,9 +38,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_08_193842) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "admin_id", null: false
-    t.string "category"
-    t.index ["admin_id"], name: "index_works_on_admin_id"
+    t.index ["admin_id"], name: "index_items_on_admin_id"
   end
 
-  add_foreign_key "works", "admins"
+  add_foreign_key "items", "admins"
 end

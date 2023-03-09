@@ -1,0 +1,11 @@
+<h1><%= @item.title %></h1>
+
+<p><%= @item.description %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_item_path(@item) %></li>
+  <li><%= link_to "Destroy", item_path(@item), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
