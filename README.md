@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# PORTFOLIO CMS
 
-Things you may want to cover:
+This is a portfolio web application that allows users (known as admins) to upload projects (known as items), create categories and be able to organize the items with the associated categories.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
