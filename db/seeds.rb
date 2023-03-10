@@ -9,3 +9,9 @@
 # admin = Admin.create(email:"admin@example.com", password:"password", password_confirmation:"password")
 # admin.save
 
+# Category.create(name:"photo")
+# Category.create(name:"design")
+# Category.create(name:"paint")
+
+Item.create(title: "New Item", description: "A new item", category_ids: [1, 2, 3], admin_id:1)
+

@@ -7,3 +7,13 @@
                     turbo_confirm: "Are you sure?"
                   } %></li>
 </ul>
+
+ <% @category.items.each do |item| %>
+    <li>
+      <%= item.title %>
+    </li>
+    <p>
+        <%= item.description %>
+    </p>
+
+  <% end %>

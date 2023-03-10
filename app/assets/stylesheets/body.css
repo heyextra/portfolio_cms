@@ -1,0 +1,11 @@
+
+@font-face {
+    font-family: 'Climate Crisis';
+    src: url('ClimateCrisis-Regular');
+    
+  } 
+
+  html{
+    font-family: 'Climate Crisis', cursive;
+    font-size: 48px;
+  }
