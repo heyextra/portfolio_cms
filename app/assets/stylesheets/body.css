@@ -2,10 +2,18 @@
 @font-face {
     font-family: 'Climate Crisis';
     src: url('ClimateCrisis-Regular');
-    
   } 
+  @font-face {
+    font-family: 'Roboto';
+    src: url('RobotoSlab-Medium')
+  }
 
-  html{
+  body{
+    font-family: 'Roboto';
+    font-size: 32px;
+  }
+
+  h1{
     font-family: 'Climate Crisis', cursive;
-    font-size: 48px;
+    font-size: 52px;
   }
