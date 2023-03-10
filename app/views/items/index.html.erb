@@ -3,11 +3,10 @@
 <ul>
   <% @items.each do |item| %>
     <li>
-      <%= item.title %>
-    </li>
-    <p>
+      <h1>
+      <%= link_to item.title, item %>
+      </h1>
         <%= item.description %>
-    </p>
-
+  </li>
   <% end %>
 </ul>
