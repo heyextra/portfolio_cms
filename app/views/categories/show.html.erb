@@ -10,7 +10,7 @@
 
  <% @category.items.each do |item| %>
     <li>
-      <%= item.title %>
+     <%= link_to item.title, item %>
     </li>
     <p>
         <%= item.description %>

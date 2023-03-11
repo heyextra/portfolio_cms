@@ -1,9 +1,9 @@
 class Item < ApplicationRecord
-    validates :title, presence: true
-    validates :description, presence: true
+    validates_presence_of :title, :description
     has_many :item_categories
     has_many :categories, through: :item_categories
     belongs_to :admin
+    has_rich_text :description
 
 #   You can access categories for an item by calling @item.categories
 #   When creating a new item, you can also associate it with one 
