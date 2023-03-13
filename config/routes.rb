@@ -7,8 +7,7 @@ Rails.application.routes.draw do
   get 'portal/items'
   get 'portal/categories'
   get 'portal/items/:id', to: 'portal#show_item', as: 'portal_item'
-
   get "/pages/:page" => "pages#show"
 
-  resources :items, :categories, :portal
+  resources :items, :categories
 end

@@ -9,6 +9,9 @@ class PortalController < ApplicationController
       @items = Item.all.includes(:admin)
     end
   
+    def categories
+      @categories = Category.all.includes(:admin)
+    end
   
     def users; end
   

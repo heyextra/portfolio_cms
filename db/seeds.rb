@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# admin = Admin.create(email:"admin@example.com", password:"password", password_confirmation:"password")
-# admin.save
+admin = Admin.create(email:"admin@example.com", password:"password", password_confirmation:"password")
+admin.save
 
-# Category.create(name:"photo")
-# Category.create(name:"design")
-# Category.create(name:"paint")
+Category.create(name:"photo", admin_id:1)
+Category.create(name:"design", admin_id:1)
+Category.create(name:"paint", admin_id:1)
 
 Item.create(title: "New Item", description: "A new item", category_ids: [1, 2, 3], admin_id:1)
 

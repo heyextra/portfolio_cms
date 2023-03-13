@@ -1,0 +1,4 @@
+<h1>ADMIN PORTAL</h1>
+<%= link_to "Sign out", destroy_admin_session_path, data: { turbo_method: :delete } %>
+<%= link_to "Categories", portal_categories_path %>
+<%= link_to "Items", portal_items_path %>
