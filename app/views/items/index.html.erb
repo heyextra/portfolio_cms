@@ -1,5 +1,5 @@
 <h1>Items</h1>
-
+<%= link_to "Log out", destroy_admin_session_path, :method => :destroy  %>
 <ul>
   <% @items.each do |item| %>
     <li>

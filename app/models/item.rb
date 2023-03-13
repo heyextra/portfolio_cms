@@ -1,9 +1,13 @@
 class Item < ApplicationRecord
+    belongs_to :admin
     validates_presence_of :title, :description
+   
+
     has_many :item_categories
     has_many :categories, through: :item_categories
-    belongs_to :admin
+
     has_rich_text :description
+    has_many_attached :photos
 
 #   You can access categories for an item by calling @item.categories
 #   When creating a new item, you can also associate it with one 

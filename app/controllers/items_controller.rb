@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :authenticate_admin!, :except => [:index, :show]
   def index
     @items = Item.all
   end
@@ -35,13 +36,13 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item = Article.find(params[:id])
+    @item = Item.find(params[:id])
     @item.destroy
 
     redirect_to root_path, status: :see_other
   end
   private
     def item_params
-      params.require(:item).permit(:title, :description, :link, :tags, :admin_id, :category_ids => [])
+      params.require(:item).permit(:title, :description, :link, :tags, :admin_id, :category_ids => [], :photos => [])
     end
 end

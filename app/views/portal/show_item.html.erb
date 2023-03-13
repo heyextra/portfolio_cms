@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="text-center">Adminstrator</h1>
+    <ul>
+        <li><%= @item.title %> |
+        <%= @item.description %> |
+        <%= @item.admin.email %>
+        </li>
+        <li>
+        <%= link_to "Edit", edit_item_path(@item) %>
+        </li>
+    </ul>
+</div>

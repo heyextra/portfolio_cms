@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="text-center">Admin Portal</h1>
+    <ul>
+      <% @items.each do |item| %>
+      
+        <li><%= link_to item.title, portal_item_path(item) %> |
+        <%= item.description.to_plain_text.truncate(25) %> |
+        <%= item.admin.email %>
+        </li>
+      <% end %>
+    </ul>
+</div>

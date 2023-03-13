@@ -1,6 +1,11 @@
 <h1><%= @item.title %></h1>
 
-<p><%= @item.description %></p>
+<p><%= @item.description %><br>
+<% @item.categories.each do |category| %>
+<%= category.name %>
+<% end %>
+</p>
+
 
 <ul>
   <li><%= link_to "Edit", edit_item_path(@item) %></li>
