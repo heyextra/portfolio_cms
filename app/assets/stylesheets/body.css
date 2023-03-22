@@ -4,16 +4,138 @@
     src: url('ClimateCrisis-Regular');
   } 
   @font-face {
-    font-family: 'Roboto';
-    src: url('RobotoSlab-Medium')
+    font-family: 'Sinhala';
+    src: url('Sinhala.ttc')
+  }
+
+  html{
+    margin: 0;
   }
 
   body{
-    font-family: 'Roboto';
-    font-size: 32px;
+    font-family: 'Sinhala';
+    font-size: 13pt;
+    color: black;
   }
 
-  h1{
-    font-family: 'Climate Crisis', cursive;
-    font-size: 52px;
+  .wrapper{
+    margin: 0 auto;
+    max-width: 1200px;
   }
+
+
+#divider{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#main{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding: 0 15px;
+}
+#main > ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+  h1{
+    font-family: 'Sinhala';
+    font-size: 20pt;
+    color: #4500FF;
+  }
+
+  h2{
+    font-weight: normal;
+    font-size: 16pt;
+    line-height: 0;
+  }
+
+  a:link, a:hover, a:visited, a:active{
+    color: #4500FF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  
+
+  .items {
+    --auto-grid-min-size: 21rem;
+    padding: 0 15px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 1rem;
+  }
+
+  
+.item-preview {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 1px solid #4500FF;
+}
+.item-preview > h3{
+  text-align: left;
+}
+.item-preview > h3 > a{
+ color: #000000;
+}
+
+header{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* nav > ul{
+  list-style: none;
+
+} */
+
+/* nav > ul > li{
+  display: inline-block;
+}
+
+.navlinks > a:link, .navlinks > a:hover, .navlinks > a:visited, .navlinks > a:active{
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+} */
+
+.catlinks{
+  margin-top: -20px;
+}
+.catlinks > ul{
+  list-style: none;
+  padding: 0;
+
+}
+
+.catlinks > ul > li{
+  display: inline-block;
+  font-weight: bold;
+  color: #000000;
+}
+.itemlink{
+  font-weight: bold;
+}
+
+.img-wrap{
+  border: 1px solid black;
+  padding: 5px;
+  height: 20rem;
+  background-position: center;
+  background-size: cover;
+  }
+
+.img-wrap > img{
+  height: 19rem;
+}
+
+
+

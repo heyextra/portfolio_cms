@@ -16,6 +16,7 @@
   flex: 1 0 33%;
   padding: 0 0.5em;
   max-width: 33%;
+  
 }
 
 .trix-content .attachment-gallery.attachment-gallery--2 > action-text-attachment,
@@ -28,4 +29,15 @@
 .trix-content action-text-attachment .attachment {
   padding: 0 !important;
   max-width: 100% !important;
+  text-align: left !important;
+  
+}
+.attachment__caption {
+  color: #4500FF !important;
+  text-align: left !important;
+  font-weight: bold;
+  display: none;
+}
+.trix-content{
+  line-height: 1.3 !important;
 }

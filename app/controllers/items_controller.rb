@@ -1,14 +1,19 @@
 class ItemsController < ApplicationController
   before_action :authenticate_admin!, :except => [:index, :show]
+  include ActiveStorage::SetCurrent
   def index
+    @categories = Category.all
     @items = Item.all
   end
 
   def show
     @item = Item.find(params[:id])
+    @items = @item.categories.first.items
+    @categories = Category.all
   end
 
   def new
+    @categories = Category.all
     @item = Item.new
   end
 
@@ -23,6 +28,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    @categories = Category.all
     @item = Item.find(params[:id])
   end
 

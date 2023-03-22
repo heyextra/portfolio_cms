@@ -1,11 +1,13 @@
-<h1>Items</h1>
-<ul>
-  <% @items.each do |item| %>
-    <li>
-      <h1>
-      <%= link_to item.title, item %>
-      </h1>
-        <%= item.description %>
-  </li>
+<div class="mainwrap">
+<ul class="items">
+ <% @items.each do |item| %>
+    <li class="item-preview">
+    <div class="img-wrap" style="background-image: url('<%= item.description.body.attachments.first.url %>')">
+      </div>
+      <h3>
+        <%= link_to item.title, item %>
+      </h3>
+    </li>
   <% end %>
 </ul>
+</div>

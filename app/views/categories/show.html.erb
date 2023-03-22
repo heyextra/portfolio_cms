@@ -1,11 +1,16 @@
-<h1><%= @category.name %></h1>
-<ul>
+<div class="mainwrap">
+<ul class="items">
  <% @category.items.each do |item| %>
-    <li>
-     <%= link_to item.title, item %>
-    <p>
-        <%= item.description %>
-    </p>
-     </li>
-</ul>
+    <li class="item-preview">
+    <div class="img-wrap" style="background-image: url('<%= item.description.body.attachments.first.url %>')">
+      </div>
+      <h3>
+        <%= link_to item.title, item %>
+      </h3>
+    </li>
   <% end %>
+</ul>
+</div>
+
+
+

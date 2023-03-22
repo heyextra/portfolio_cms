@@ -1,13 +1,16 @@
 class CategoriesController < ApplicationController
+  include ActiveStorage::SetCurrent
     def index
         @categories = Category.all
       end
     
       def show
+        @categories = Category.all
         @category = Category.friendly.find(params[:id])
       end
     
       def new
+        @categories = Category.all
         @category = Category.new
       end
     
@@ -22,6 +25,7 @@ class CategoriesController < ApplicationController
       end
     
       def edit
+        @categories = Category.all
         @category = Category.friendly.find(params[:id])
       end
     
