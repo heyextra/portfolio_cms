@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_admin!, :except => [:index, :show]
   include ActiveStorage::SetCurrent
     def index
         @categories = Category.all

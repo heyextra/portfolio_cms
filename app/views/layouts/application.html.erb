@@ -11,33 +11,33 @@
   </head>
 
   <body>
+  <div>
   <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
-<div class="wrapper window">
+<div class="wrapper">
 <%= render "layouts/header" %>
-
 <div id="divider">
-<svg id="leftmark" xmlns="http://www.w3.org/2000/svg" width="13.5" height="14.5" viewBox="0 0 13.5 14.5">
-  <line id="Line_1" data-name="Line 1" y1="14" transform="translate(13)" fill="none" stroke="#707070" stroke-width="1"/>
-  <line id="Line_2" data-name="Line 2" x2="13" transform="translate(0 14)" fill="none" stroke="#707070" stroke-width="1"/>
-</svg>
-<svg xmlns="http://www.w3.org/2000/svg" width="13.5" height="14.5" viewBox="0 0 13.5 14.5">
-  <g id="rightmark" transform="translate(0.5)">
-    <g id="Group_4" data-name="Group 4">
-      <line id="Line_3" data-name="Line 3" y2="14" transform="translate(0 14) rotate(180)" fill="none" stroke="#707070" stroke-width="1"/>
-      <line id="Line_4" data-name="Line 4" x2="13" transform="translate(13 14) rotate(180)" fill="none" stroke="#707070" stroke-width="1"/>
+  <svg id="leftmark" xmlns="http://www.w3.org/2000/svg" width="13.5" height="14.5" viewBox="0 0 13.5 14.5">
+    <line id="Line_1" data-name="Line 1" y1="14" transform="translate(13)" fill="none" stroke="#707070" stroke-width="1"/>
+    <line id="Line_2" data-name="Line 2" x2="13" transform="translate(0 14)" fill="none" stroke="#707070" stroke-width="1"/>
+  </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="13.5" height="14.5" viewBox="0 0 13.5 14.5">
+    <g id="rightmark" transform="translate(0.5)">
+      <g id="Group_4" data-name="Group 4">
+        <line id="Line_3" data-name="Line 3" y2="14" transform="translate(0 14) rotate(180)" fill="none" stroke="#707070" stroke-width="1"/>
+        <line id="Line_4" data-name="Line 4" x2="13" transform="translate(13 14) rotate(180)" fill="none" stroke="#707070" stroke-width="1"/>
+      </g>
     </g>
-  </g>
-</svg>
-
+  </svg>
 </div>
-
+<div class="fade-in">
     <%= yield %>
+</div>
     </div>
-    <%= javascript_importmap_tags "header" %>
+    </div>
   </body>
 </html>

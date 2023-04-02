@@ -75,13 +75,10 @@
   padding: 1rem;
   text-align: center;
   font-size: 1.2rem;
-  border: 1px solid #4500FF;
+  border: 1px solid #000;
 }
 .item-preview > h3{
   text-align: left;
-}
-.item-preview > h3 > a{
- color: #000000;
 }
 
 header{
@@ -135,6 +132,9 @@ header{
 
 .img-wrap > img{
   height: 19rem;
+}
+.content{
+  padding: 0 15px;
 }
 
 

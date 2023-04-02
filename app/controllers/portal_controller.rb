@@ -1,5 +1,6 @@
 class PortalController < ApplicationController
     before_action :authenticate_admin!
+    include ActiveStorage::SetCurrent
     def index
       @categories = Category.all.includes(:admin)
     end
@@ -14,7 +15,6 @@ class PortalController < ApplicationController
       @categories = Category.all.includes(:admin)
     end
   
-    def users; end
   
   
     def show_item
