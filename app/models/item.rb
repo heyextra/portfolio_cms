@@ -8,7 +8,7 @@ class Item < ApplicationRecord
 
     has_rich_text :description
     has_many_attached :photos
-    has_one :thumbnail
+    has_one_attached :thumbnail
 
 #   You can access categories for an item by calling @item.categories
 #   When creating a new item, you can also associate it with one 

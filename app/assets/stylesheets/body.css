@@ -14,7 +14,7 @@
 
   body{
     font-family: 'Sinhala';
-    font-size: 13pt;
+    font-size: 16pt;
     color: black;
   }
 
@@ -43,14 +43,14 @@
 
   h1{
     font-family: 'Sinhala';
-    font-size: 20pt;
-    color: #4500FF;
+    font-size: 40pt;
+    line-height: 0.5;
   }
 
   h2{
     font-weight: normal;
-    font-size: 16pt;
-    line-height: 0;
+    font-size: 18pt;
+    margin: 0;
   }
 
   a:link, a:hover, a:visited, a:active{
@@ -136,6 +136,50 @@ header{
 .content{
   padding: 0 15px;
 }
+.home-grid{
+  display: grid;
+}
+
+.text-right{
+  justify-self: end;
+  text-align: right;
+}
+.home-paragraph{
+  max-width: 75%;
+}
 
 
+.link-button{
+  color: white;
+  background-color: #4500FF;
+  border-radius: 55px;
+  padding: 10px;
+  transition: all .3s ease-out;
+  display: inline-block;
+}
+a.link-button{
+color: white;
+}
+a:hover.link-button{
+  transform: translate(2px, -20px);
 
+}
+
+.selfie{
+  max-width: 400px;
+}
+
+@media (max-width: 720px) {
+  .hero{
+    flex-direction: column;
+  }
+h1{
+  font-size: 28pt;
+}
+h2{
+  font-size: 16pt;
+}
+body{
+  font-size: 14pt;
+}
+}

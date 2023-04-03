@@ -2,7 +2,7 @@
 <ul class="items">
  <% @category.items.each do |item| %>
     <li class="item-preview">
-    <div class="img-wrap" style="background-image: url('<%= item.description.body.attachments.first.url %>')">
+    <div class="img-wrap" style="background-image: url('<%= item.thumbnail.url %>')">
       </div>
       <h3>
         <%= link_to item.title, item %>
