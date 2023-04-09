@@ -7,11 +7,15 @@
   <% end %>
 </ul>
 <div id="itemwrapper">
+<h1 style="text-align:right; margin-top:0; margin-right:10px;"><%= @item.title %></h1>
 <%= @item.description.body %>
-<h1><%= @item.title %></h1>
+Scope:
 <% @item.categories.each do |category| %>
 <%= link_to category.name, category_path(category.friendly_id) %>
 <% end %>
+<br>
+<%= @item.tags %>r
+
 </p>
 </div>
 </div>

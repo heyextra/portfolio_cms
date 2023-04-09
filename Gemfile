@@ -8,6 +8,7 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 gem 'sassc-rails'
 gem "devise"
 gem 'friendly_id', '~> 5.4.0'
+gem 'aws-sdk-s3'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -73,3 +74,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "dockerfile-rails", ">= 1.2", :group => :development
+
+gem "pg", "~> 1.4"
+
+gem "redis", "~> 5.0"

@@ -32,19 +32,23 @@
 
 #main{
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-areas: "simitems item";
   padding: 0 15px;
 }
 #main > ul{
   list-style: none;
   padding: 0;
   margin: 0;
+  grid-area: simitems;
+}
+.itemwrapper{
+  grid-area: item;
 }
 
   h1{
     font-family: 'Sinhala';
-    font-size: 40pt;
-    line-height: 0.5;
+    font-size: 36pt;
+    line-height: 0.9;
   }
 
   h2{
@@ -144,9 +148,7 @@ header{
   justify-self: end;
   text-align: right;
 }
-.home-paragraph{
-  max-width: 75%;
-}
+
 
 
 .link-button{
@@ -156,17 +158,28 @@ header{
   padding: 10px;
   transition: all .3s ease-out;
   display: inline-block;
+  box-shadow: 3px 3px 8px rgb(40, 65, 134);
 }
 a.link-button{
 color: white;
 }
 a:hover.link-button{
   transform: translate(2px, -20px);
+  box-shadow: -1px 9px 12px rgb(40, 65, 134);
 
 }
 
 .selfie{
+  width: 100%;
   max-width: 400px;
+  align-self: center;
+}
+
+.testimonial-box{
+  background: rgb(246, 246, 246);
+padding: 12px;
+border-radius: 15px;
+box-shadow: 2px 2px 4px rgb(215, 215, 215);
 }
 
 @media (max-width: 720px) {
@@ -174,12 +187,15 @@ a:hover.link-button{
     flex-direction: column;
   }
 h1{
-  font-size: 28pt;
+  font-size: 22pt;
 }
 h2{
   font-size: 16pt;
 }
 body{
   font-size: 14pt;
+}
+#main{
+  grid-template-areas: "item" "simitems";
 }
 }
